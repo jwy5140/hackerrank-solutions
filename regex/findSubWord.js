@@ -1,5 +1,3 @@
-// Needs to be fixed.
-
 function processData(input) {
     const nums = input.match(/\d+(?=\n)/g)
     const arr = input.replace(/[0-9]+\n/g, '').split('\n')
