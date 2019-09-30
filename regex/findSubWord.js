@@ -1,14 +1,14 @@
 // Needs to be fixed.
 
 function processData(input) {
-    const nums = input.match(/\d(?=\n)/g)
+    const nums = input.match(/\d+(?=\n)/g)
     const arr = input.replace(/[0-9]+\n/g, '').split('\n')
     let ans;
     let rgx;
     let matches;
-    for (let n = nums[0]; n < arr.length; n++){
+    for (let n = parseInt(nums[0]); n < arr.length; n++){
         ans = 0;
-        for (let n2 = 0; n2 < nums[0]; n2++){
+        for (let n2 = 0; n2 < parseInt(nums[0]); n2++){
             rgx = new RegExp(`\\w${arr[n]}\\w`, 'g')
             matches = getMatch(rgx, arr[n2])
             ans = ans + matches
